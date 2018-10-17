@@ -1,0 +1,80 @@
+{
+  "TwilightGuardian": {
+    "NAME": "TwilightGuardian",
+    "MOVES": [
+      "Uber Bash",
+      "Twilight Fury",
+      "Crystal Wind"
+
+    ],
+    "DIALOG": [
+      "I see."
+    ]
+  },
+
+  "Monkey": {
+    "NAME": "Trickster Monkey",
+    "MOVES": [
+      "Banana Bash",
+      "Monkey Around",
+      "Swing"
+
+    ],
+    "DIALOG": [
+      "heeHEEhee.. see me now??"
+    ]
+  },
+
+  "GremlinKing": {
+    "NAME": "Gremlin King",
+    "MOVES": [
+      "Boast",
+      "Hide",
+      "Throne Smash"
+
+    ],
+    "DIALOG": [
+      "HAHAHA! YOU WILL NEVER TOUCH ME, PEASANT!"
+    ]
+  },
+
+  "Pilcrow": {
+    "NAME": "Pilcrow",
+    "MOVES": [
+      "Wither",
+      "Intro",
+      "Conclusion"
+
+    ],
+    "DIALOG": [
+      "This is your end."
+    ]
+  },
+
+  "Paranoia": {
+    "NAME": "Paranoia",
+    "MOVES": [
+      "Illusion",
+      "Madness",
+      "Insanity"
+
+    ],
+    "DIALOG": [
+      "..."
+    ]
+  },
+
+  "RustBeast": {
+    "NAME": "Rust Beast",
+    "MOVES": [
+      "Claw",
+      "Scrape",
+      "Corrode",
+      "Roar"
+
+    ],
+    "DIALOG": [
+      "Grrrr..."
+    ]
+  }
+  }

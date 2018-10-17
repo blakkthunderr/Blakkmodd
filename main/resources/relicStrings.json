@@ -1,0 +1,131 @@
+{
+  "GoldMedallion": {
+    "NAME": "Gold Medallion",
+    "FLAVOR": "Don't let it get to your head.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. Upon defeating Elites, obtain 1 Pride."
+    ]
+  },
+
+  "Megaphone": {
+    "NAME": "Megaphone",
+    "FLAVOR": "Requires batteries.",
+    "DESCRIPTIONS": [
+      "Lose [E] at the start of each turn. The first card you play each turn is played twice."
+    ]
+  },
+
+  "YinYang": {
+    "NAME": "Yin-Yang",
+    "FLAVOR": "Perfectly balanced.",
+    "DESCRIPTIONS": [
+      "Every 2 turns, gain 2 [E]."
+    ]
+  },
+
+  "Ruby": {
+    "NAME": "Ruby",
+    "FLAVOR": "Omega.",
+    "DESCRIPTIONS": [
+      "Whenever you play 7 attacks, add a random attack to your hand and gain 2 [E]."
+    ]
+  },
+
+  "Emerald": {
+    "NAME": "Emerald",
+    "FLAVOR": "Delta.",
+    "DESCRIPTIONS": [
+      "Whenever you play 6 skills, add a random skill to your hand and gain 2 [E]."
+    ]
+  },
+
+  "Sapphire": {
+    "NAME": "Sapphire",
+    "FLAVOR": "Alpha.",
+    "DESCRIPTIONS": [
+      "Whenever you play 4 powers, add a random power to your hand and gain 2 [E]."
+    ]
+  },
+
+  "TwilightShard": {
+  "NAME": "Twilight Shard",
+  "FLAVOR": "Fleeting light shines from this stone.",
+  "DESCRIPTIONS": [
+    "Gain [E] every turn for 20 turns."
+  ]
+},
+
+  "MonkeysToyBox": {
+    "NAME": "Monkey's Toy Box",
+    "FLAVOR": "You can find all kinds of wacky trinkets in here!",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain 3 common relics."
+    ]
+  },
+
+  "ChipBag": {
+    "NAME": "Bag of Chips",
+    "FLAVOR": "Addictive.",
+    "DESCRIPTIONS": [
+      "At the start of 10 combats, heal 4 HP."
+    ]
+  },
+
+  "TheDonut": {
+    "NAME": "The Donut",
+    "FLAVOR": "Beware, eat too many of these and you'll get sleepy.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. Start each combat with 2 less Dexterity."
+    ]
+  },
+
+  "RappingBowl": {
+    "NAME": "Rapping Bowl",
+    "FLAVOR": "The less in the way, the quicker you can flow, yo.",
+    "DESCRIPTIONS": [
+      "Start each combat with 5 Strength and Dexterity. Lose 1 Strength and Dexterity for every 5 cards in your deck."
+    ]
+  },
+
+  "CigarettePack": {
+    "NAME": "Cigarette Pack",
+    "FLAVOR": "Not great for the lungs, but people will think you're cooler.",
+    "DESCRIPTIONS": [
+      "Upon pickup, lose 5 Max HP. All enemies start with -1 strength."
+    ]
+  },
+
+  "CowardCrown": {
+    "NAME": "Coward Crown",
+    "FLAVOR": "Worn by a very cowardly king..",
+    "DESCRIPTIONS": [
+      "Start each combat with 2 Metallicize."
+    ]
+  },
+
+  "NeowsEye": {
+    "NAME": "Neow's Eye",
+    "FLAVOR": "How did that get here?",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain a random Boss relic."
+    ]
+  },
+
+  "BlakkSword": {
+    "NAME": "The Blakk Sword",
+    "FLAVOR": "Forged from the deepest realm of void.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, lose 1 charge and deal 10 damage to ALL enemies for every charge of this relic. Defeating Elites grants 3 charges. Starts with 3."
+    ]
+  },
+
+  "LostSoul": {
+    "NAME": "Lost Soul",
+    "FLAVOR": "Perhaps the only thing that remained.",
+    "DESCRIPTIONS": [
+      "Start each combat with 1 Soul."
+    ]
+  }
+
+
+  }

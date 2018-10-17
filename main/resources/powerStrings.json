@@ -1,0 +1,36 @@
+{
+  "Bloodthirst": {
+    "NAME": "Bloodthirst",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, heal 1 HP."
+    ]
+  },
+
+  "ThrowingArsenal": {
+    "NAME": "Throwing Arsenal",
+    "DESCRIPTIONS": [
+      "Attack cards cannot Exhaust."
+    ]
+  },
+
+  "Complexity": {
+    "NAME": "Complexity",
+    "DESCRIPTIONS": [
+      "Whenever you play a Skill, this enemy loses 1 Strength for this turn."
+    ]
+  },
+
+  "Souls": {
+    "NAME": "Souls",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+
+  "GlassSkin": {
+    "NAME": "Glass Skin",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain Block and Frailty."
+    ]
+  }
+  }
