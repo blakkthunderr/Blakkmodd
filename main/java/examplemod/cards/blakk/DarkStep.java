@@ -15,7 +15,7 @@ public class DarkStep
         extends CustomCard {
     public static final String ID = "DarkStep";
     public static final String NAME = "Dark Step";
-    public static final String DESCRIPTION = "Gain !M! [e]. Draw 1 card.";
+    public static final String DESCRIPTION = "Gain !M! [E]. Draw 1 card.";
     public static final String IMG_PATH = "img/BlakkStrike.png";
     private static final int COST = 0;
 

@@ -51,8 +51,6 @@ public class BlakkKnight extends CustomPlayer {
         startingDeck.add(BlakkStrike.ID);
         startingDeck.add(BlakkStrike.ID);
         startingDeck.add(BlakkStrike.ID);
-        startingDeck.add(BlakkStrike.ID);
-        startingDeck.add(BlakkDefend.ID);
         startingDeck.add(BlakkDefend.ID);
         startingDeck.add(BlakkDefend.ID);
         startingDeck.add(BlakkDefend.ID);
@@ -72,8 +70,8 @@ public class BlakkKnight extends CustomPlayer {
 
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo("Blakk Knight",
-                "A   NL " +
-                        "Ts",
+                "A knight from the dark times." +
+                        "Uses dark magic and collects souls.",
                 80, 80, 0, 99, 5,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
