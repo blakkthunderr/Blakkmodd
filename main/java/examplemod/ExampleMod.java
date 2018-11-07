@@ -84,7 +84,7 @@ public class ExampleMod implements PostExhaustSubscriber,
     public void receiveEditCharacters() {
 
         BaseMod.addCharacter(new BlakkKnight("Blakk Knight", MyPlayerClassEnum.BLAKK_KNIGHT),
-                BLAKK_COLOR,
+
                 BLAKK_BUTTON,
                 BLAKK_PORTRAIT,
                 MyPlayerClassEnum.BLAKK_KNIGHT);
@@ -139,6 +139,11 @@ public class ExampleMod implements PostExhaustSubscriber,
                 new GremlinNob(+300, 0)
         }));
 
+        BaseMod.addBoss(TheBeyond.ID, "StoneGiant",
+                "img/ColossusPic.png",
+                "img/ColossusPic.png");
+
+
         BaseMod.addBoss(TheCity.ID, "GremlinKing",
                 "img/GremlinKingPic.png",
                 "img/GremlinKingPic.png");
@@ -171,6 +176,12 @@ public class ExampleMod implements PostExhaustSubscriber,
                 new TwilightGuardian(),
 
         }));
+
+        BaseMod.addMonster("StoneGiant", () -> new MonsterGroup(new AbstractMonster[]{
+                new StoneGiant(),
+
+        }));
+
 
 
         BaseMod.addBoss(TheBeyond.ID, "TwilightGuardian",
@@ -242,8 +253,39 @@ public class ExampleMod implements PostExhaustSubscriber,
         BaseMod.addCard(new FullDefend()); //Skill
         BaseMod.addCard(new AlphaShield()); //Skill
         BaseMod.addCard(new DarkStep()); //Skill
-
-
+        BaseMod.addCard(new GraspHeart()); //Attack
+        BaseMod.addCard(new SoulConsume()); //Skill
+        BaseMod.addCard(new Shank()); //Attack
+        BaseMod.addCard(new TableFlip()); //Attack
+        BaseMod.addCard(new Revert()); //Skill
+        BaseMod.addCard(new Overexert()); //Skill
+        BaseMod.addCard(new MassiveSlam()); //Attack
+        BaseMod.addCard(new DarkHorse()); //Skill
+        BaseMod.addCard(new Graveyard()); //Attack
+        BaseMod.addCard(new FlamingBlade()); //Attack
+        BaseMod.addCard(new BladeCombo()); //Attack
+        BaseMod.addCard(new TunnelVision()); //Skill
+        BaseMod.addCard(new DarkForce()); //Skill
+        BaseMod.addCard(new WitchProtection()); //Power
+        BaseMod.addCard(new BlackenedSword()); //Attack
+        BaseMod.addCard(new BlakkBlade()); //Attack
+        BaseMod.addCard(new HardSteel()); //Skill
+        BaseMod.addCard(new WraithArmor()); //Skill
+        BaseMod.addCard(new Minimalism()); //Power
+        BaseMod.addCard(new GrandMitosis()); //Skill
+        BaseMod.addCard(new BlakkMist()); //Power
+        BaseMod.addCard(new Sacrifice()); //Skill
+        BaseMod.addCard(new Infinitum()); //Power
+        BaseMod.addCard(new Beyond()); //Power
+        BaseMod.addCard(new Teleport()); //Skill
+        BaseMod.addCard(new VorpalSword()); //Attack
+        BaseMod.addCard(new VortexShield()); //Skill
+        BaseMod.addCard(new TripleThreat()); //Attack
+        BaseMod.addCard(new Backflap()); //Skill
+        BaseMod.addCard(new SiphonSoul()); //Skill
+        BaseMod.addCard(new IronMaiden()); //Power
+        BaseMod.addCard(new TitanSword()); //Attack
+        BaseMod.addCard(new MonsterForm()); //Power
 
 
     }
@@ -270,6 +312,8 @@ public class ExampleMod implements PostExhaustSubscriber,
         BaseMod.addRelic(new CigarettePack(), RelicType.SHARED);
 
         BaseMod.addRelicToCustomPool(new LostSoul(), BLAKK_COLOR);
+        BaseMod.addRelicToCustomPool(new RagefulSoul(), BLAKK_COLOR);
+        BaseMod.addRelicToCustomPool(new VileSoul(), BLAKK_COLOR);
 }
 
 

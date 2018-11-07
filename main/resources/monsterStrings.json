@@ -65,16 +65,30 @@
   },
 
   "RustBeast": {
-    "NAME": "Rust Beast",
+  "NAME": "Rust Beast",
+  "MOVES": [
+    "Claw",
+    "Scrape",
+    "Corrode",
+    "Roar"
+
+  ],
+  "DIALOG": [
+    "Grrrr..."
+  ]
+},
+  "StoneGiant": {
+    "NAME": "Stone Colossus",
     "MOVES": [
-      "Claw",
-      "Scrape",
-      "Corrode",
-      "Roar"
+      "Sleep",
+      "Giant Rage",
+      "Earthquake",
+      "Rest",
+      "Giant Crush"
 
     ],
     "DIALOG": [
-      "Grrrr..."
+      "RRRGGGHH..."
     ]
   }
   }

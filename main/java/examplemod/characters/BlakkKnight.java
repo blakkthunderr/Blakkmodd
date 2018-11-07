@@ -1,10 +1,12 @@
 package examplemod.characters;
 
 import basemod.abstracts.CustomPlayer;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import examplemod.cards.blakk.BlakkDefend;
 import examplemod.cards.blakk.BlakkStrike;
 import examplemod.cards.blakk.SoulBloom;
 import examplemod.cards.blakk.SoulStrike;
+import examplemod.patches.AbstractCardEnum;
 import examplemod.patches.MyPlayerClassEnum;
 
 import com.badlogic.gdx.graphics.Color;
@@ -57,6 +59,7 @@ public class BlakkKnight extends CustomPlayer {
         startingDeck.add(BlakkDefend.ID);
 
         startingDeck.add(SoulBloom.ID);
+        startingDeck.add(SoulStrike.ID);
 
         return startingDeck;
     }
@@ -88,14 +91,19 @@ public class BlakkKnight extends CustomPlayer {
     }
 
     @Override
-    public Color getCardColor() {
+    public AbstractCard.CardColor getCardColor() {
+        return AbstractCardEnum.BLAKK_COLOR;
+    }
+
+    @Override
+    public Color getCardRenderColor() {
         return Color.BLACK;
     }
 
 
     @Override
     public Color getCardTrailColor() {
-        return Color.BLACK;
+        return Color.GREEN;
     }
 
     @Override
@@ -122,6 +130,26 @@ public class BlakkKnight extends CustomPlayer {
     @Override
     public String getLocalizedCharacterName() {
         return "Blakk Knight";
+    }
+
+    @Override
+    public String getSpireHeartText() {
+        return "NL You ready your Darkest Magic...";
+    }
+
+    @Override
+    public Color getSlashAttackColor() {
+        return Color.BLACK;
+    }
+
+    @Override
+    public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
+        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.BLUNT_HEAVY};
+    }
+
+    @Override
+    public String getVampireText() {
+        return "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~dark dweller,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";
     }
 
     @Override

@@ -23,7 +23,7 @@ public class BlakkStrike
     public BlakkStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.BLAKK_COLOR,
-                CardRarity.SPECIAL, CardTarget.ENEMY);
+                CardRarity.BASIC, CardTarget.ENEMY);
         this.damage=this.baseDamage = ATTACK_DMG;
 
     }

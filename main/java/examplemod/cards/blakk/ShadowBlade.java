@@ -5,7 +5,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.status.Void;
+import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,7 +17,7 @@ public class ShadowBlade
     public static final String ID = "ShadowBlade";
     public static final String NAME = "Shadow Blade";
     public static final String DESCRIPTION = "Deal !D! damage. Add a Void to your discard pile.";
-    public static final String IMG_PATH = "img/BlakkStrike.png";
+    public static final String IMG_PATH = "img/ShadowBlade.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 12;
     private static final int UPGRADE_PLUS_DMG = 4;
@@ -36,7 +37,7 @@ public class ShadowBlade
                 new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Void(), 1));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new VoidCard(), 1));
 
     }
 

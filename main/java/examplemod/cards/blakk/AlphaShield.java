@@ -15,7 +15,7 @@ public class AlphaShield
     public static final String ID = "AlphaShield";
     public static final String NAME = "Alpha Shield";
     public static final String DESCRIPTION = "Gain !B! block. Remove all of your debuffs.";
-    public static final String IMG_PATH = "img/BlakkDefend.png";
+    public static final String IMG_PATH = "img/AlphaShield.png";
     private static final int COST = 4;
     private static final int BLOCK_AMT = 20;
 
@@ -48,7 +48,7 @@ public class AlphaShield
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.baseBlock = 30;
+            this.upgradeBlock(10);
 
 
         }

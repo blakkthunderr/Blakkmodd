@@ -22,7 +22,7 @@ public class LegSlice
     public static final String ID = "LegSlice";
     public static final String NAME = "Leg Slice";
     public static final String DESCRIPTION = "Gain !B! Block. Deal !D! damage to ALL enemies.";
-    public static final String IMG_PATH = "img/SoulStrike.png";
+    public static final String IMG_PATH = "img/LegSlice.png";
     private static final int COST = 1;
 
 

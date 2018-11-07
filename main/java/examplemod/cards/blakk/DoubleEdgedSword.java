@@ -17,7 +17,7 @@ public class DoubleEdgedSword
     public static final String ID = "DoubleEdgedSword";
     public static final String NAME = "Double Edged Sword";
     public static final String DESCRIPTION = "Deal !D! damage. Gain and Apply 2 Vulnerable.";
-    public static final String IMG_PATH = "img/SoulStrike.png";
+    public static final String IMG_PATH = "img/DoubleEdgedSword.png";
     private static final int COST = 1;
     private static final int ATTACK_DMG = 10;
 

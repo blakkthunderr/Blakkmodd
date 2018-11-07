@@ -17,7 +17,7 @@ public class SoulLabor
     public static final String ID = "SoulLabor";
     public static final String NAME = "Soul Labor";
     public static final String DESCRIPTION = "Draw cards equal to the amount of Souls you have. Exhaust.";
-    public static final String IMG_PATH = "img/BlakkDefend.png";
+    public static final String IMG_PATH = "img/SoulLabor.png";
     private static final int COST = 1;
 
 

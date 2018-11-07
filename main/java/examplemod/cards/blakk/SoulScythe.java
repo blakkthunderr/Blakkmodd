@@ -19,7 +19,7 @@ public class SoulScythe
     public static final String ID = "SoulScythe";
     public static final String NAME = "Soul Scythe";
     public static final String DESCRIPTION = "Deal !D! damage. If this kills an enemy, gain 1 Soul.";
-    public static final String IMG_PATH = "img/SoulStrike.png";
+    public static final String IMG_PATH = "img/SoulScythe.png";
     private static final int COST = 2;
     private static final int ATTACK_DMG = 16;
 

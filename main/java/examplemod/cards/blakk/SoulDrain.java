@@ -19,7 +19,7 @@ public class SoulDrain
     public static final String ID = "SoulDrain";
     public static final String NAME = "Soul Drain";
     public static final String DESCRIPTION = "Apply X Weak, Vulnerable, and Frail to you and the target. Exhaust.";
-    public static final String IMG_PATH = "img/SoulBloom.png";
+    public static final String IMG_PATH = "img/SoulDrain.png";
     private static final int COST = -1;
 
 
@@ -48,7 +48,7 @@ public class SoulDrain
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, this.energyOnUse, false), this.energyOnUse));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, this.energyOnUse, false), this.energyOnUse));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VulnerablePower(p, this.energyOnUse, false), this.energyOnUse));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(-this.energyOnUse));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(-this.energyOnUse+this.magicNumber));
 
 
     }

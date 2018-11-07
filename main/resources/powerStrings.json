@@ -32,5 +32,39 @@
     "DESCRIPTIONS": [
       "At the start of your turn, gain Block and Frailty."
     ]
+  },
+
+  "WitchProtection": {
+    "NAME": "Witch's Protection",
+    "DESCRIPTIONS": [
+      "Gain block at the start of your turn for the amount of Frail, Weak, and Vulnerable you have."
+    ]
+  },
+
+  "Minimalism": {
+    "NAME": "Minimalism",
+    "DESCRIPTIONS": [
+      "At the start of each turn, Exhaust 1 card and gain 1 [E]."
+    ]
+  },
+
+  "BlakkMist": {
+    "NAME": "Blakk Mist",
+    "DESCRIPTIONS": [
+      "Your Weak, Vulnerable, and Frail no longer wear off."
+    ]
+  },
+
+  "Crumbling": {
+    "NAME": "Crumbling",
+    "DESCRIPTIONS": [
+      "When attacked, loses strength equal to the damage dealt to it."
+    ]
+  },
+  "Leaking": {
+    "NAME": "Leaking",
+    "DESCRIPTIONS": [
+      "Lose Souls at the end of your turn."
+    ]
   }
   }

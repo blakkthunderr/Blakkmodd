@@ -19,7 +19,7 @@
     "NAME": "Yin-Yang",
     "FLAVOR": "Perfectly balanced.",
     "DESCRIPTIONS": [
-      "Every 2 turns, gain 2 [E]."
+      "Every 2 turns, gain 2 [E] ."
     ]
   },
 
@@ -27,7 +27,7 @@
     "NAME": "Ruby",
     "FLAVOR": "Omega.",
     "DESCRIPTIONS": [
-      "Whenever you play 7 attacks, add a random attack to your hand and gain 2 [E]."
+      "Whenever you play 7 attacks, add a random attack to your hand and gain 2 [E] ."
     ]
   },
 
@@ -35,7 +35,7 @@
     "NAME": "Emerald",
     "FLAVOR": "Delta.",
     "DESCRIPTIONS": [
-      "Whenever you play 6 skills, add a random skill to your hand and gain 2 [E]."
+      "Whenever you play 6 skills, add a random skill to your hand and gain 2 [E] ."
     ]
   },
 
@@ -43,7 +43,7 @@
     "NAME": "Sapphire",
     "FLAVOR": "Alpha.",
     "DESCRIPTIONS": [
-      "Whenever you play 4 powers, add a random power to your hand and gain 2 [E]."
+      "Whenever you play 4 powers, add a random power to your hand and gain 2 [E] ."
     ]
   },
 
@@ -124,6 +124,21 @@
     "FLAVOR": "Perhaps the only thing that remained.",
     "DESCRIPTIONS": [
       "Start each combat with 1 Soul."
+    ]
+  },
+
+  "RagefulSoul": {
+    "NAME": "Rageful Soul",
+    "FLAVOR": "A soul burning hot to the touch. It came from a powerful warrior.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, convert all of your Souls into Strength."
+    ]
+  },
+  "VileSoul": {
+    "NAME": "Vile Soul",
+    "FLAVOR": "A sickening aura surrounds this soul. You don't want to touch it.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, apply poison to ALL enemies equal to your current Souls."
     ]
   }
 

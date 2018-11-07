@@ -28,7 +28,7 @@ public class DeadlyAura
 
     public DeadlyAura() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
-                CardType.SKILL, CardColor.COLORLESS,
+                CardType.ATTACK, CardColor.COLORLESS,
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.damage=this.baseDamage = ATTACK_DMG;
         this.isMultiDamage = true;

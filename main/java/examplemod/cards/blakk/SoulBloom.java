@@ -18,7 +18,7 @@ public class SoulBloom
     public static final String ID = "SoulBloom";
     public static final String NAME = "Soul Bloom";
     public static final String DESCRIPTION = "Gain 1 Soul. Exhaust.";
-    public static final String IMG_PATH = "img/SoulBloom.png";
+    public static final String IMG_PATH = "img/SoulCreate.png";
     private static final int COST = 1;
 
 

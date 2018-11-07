@@ -4,7 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Void;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,7 +16,7 @@ public class ShadowDodge
     public static final String ID = "ShadowDodge";
     public static final String NAME = "Shadow Dodge";
     public static final String DESCRIPTION = "Gain !B! block. Add a Void into your discard pile.";
-    public static final String IMG_PATH = "img/BlakkDefend.png";
+    public static final String IMG_PATH = "img/ShadowDodge.png";
     private static final int COST = 1;
     private static final int BLOCK_AMT = 10;
 
@@ -33,7 +33,7 @@ public class ShadowDodge
     public void use(AbstractPlayer p, AbstractMonster m) {
 
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Void(), 1));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new VoidCard(), 1));
 
 
     }

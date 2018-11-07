@@ -15,7 +15,7 @@ public class GlassSkin
     public static final String ID = "GlassSkin";
     public static final String NAME = "Glass Skin";
     public static final String DESCRIPTION = "At the end of your turn, gain 5 block and 1 Frail.";
-    public static final String IMG_PATH = "img/SoulBloom.png";
+    public static final String IMG_PATH = "img/GlassSkin.png";
     private static final int COST = 1;
 
 

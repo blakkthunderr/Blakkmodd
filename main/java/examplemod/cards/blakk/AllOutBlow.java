@@ -19,7 +19,7 @@ public class AllOutBlow
     public static final String ID = "AllOutBlow";
     public static final String NAME = "All-Out Blow";
     public static final String DESCRIPTION = "Deal !D! damage. Gain 3 Weak.";
-    public static final String IMG_PATH = "img/SoulStrike.png";
+    public static final String IMG_PATH = "img/AllOutBlow.png";
     private static final int COST = 3;
     private static final int ATTACK_DMG = 25;
 

@@ -37,21 +37,28 @@ public class SoulStrike
         //this.setBannerTexture("img/custom_banner_large.png", "img/custom_banner_large.png");
     }
 
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        if (AbstractDungeon.player.hasPower (SoulPower.POWER_ID)){
+            this.baseDamage +=  (AbstractDungeon.player.getPower(SoulPower.POWER_ID).amount*this.magicNumber);
+        }
 
+        super.calculateCardDamage(mo);
+        this.baseDamage = ATTACK_DMG;
+    }
 
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.damage = ATTACK_DMG;
-        if (p.hasPower (SoulPower.POWER_ID)){
-            this.damage +=  (p.getPower(SoulPower.POWER_ID).amount*this.magicNumber);
-        }
+
+
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
 
     }
+
 
     @Override
     public AbstractCard makeCopy() {
@@ -62,8 +69,8 @@ public class SoulStrike
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = "Deal !D! damage. Does +4 damage for every Soul you have.";
-            this.baseMagicNumber = 4;
+            this.rawDescription = "Deal !D! damage. Does +3 damage for every Soul you have.";
+            this.baseMagicNumber = 3;
             this.initializeDescription();
 
         }

@@ -18,7 +18,7 @@ public class SoulHarvest
     public static final String ID = "SoulHarvest";
     public static final String NAME = "Soul Harvest";
     public static final String DESCRIPTION = "Innate. Gain Souls equal to the amount of enemies on the field. Exhaust.";
-    public static final String IMG_PATH = "img/SoulBloom.png";
+    public static final String IMG_PATH = "img/SoulHarvest.png";
     private static final int COST = 0;
 
 
@@ -64,7 +64,7 @@ public class SoulHarvest
         if (!this.upgraded) {
             this.upgradeName();
             this.rawDescription = "Innate. Gain Souls equal to 2 times the amount of enemies on the field. Exhaust.";
-            this.baseMagicNumber = 2;
+            this.upgradeMagicNumber(1);
             this.initializeDescription();
 
         }

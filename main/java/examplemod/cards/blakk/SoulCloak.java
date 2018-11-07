@@ -16,7 +16,7 @@ public class SoulCloak
     public static final String ID = "SoulCloak";
     public static final String NAME = "Soul Cloak";
     public static final String DESCRIPTION = "Gain block equal to the amount of Souls you have.";
-    public static final String IMG_PATH = "img/BlakkDefend.png";
+    public static final String IMG_PATH = "img/SoulCloak.png";
     private static final int COST = 0;
     private static final int BLOCK_AMT = 6;
 

@@ -24,7 +24,7 @@ public class BlakkDefend
     public BlakkDefend() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.BLAKK_COLOR,
-                CardRarity.SPECIAL, CardTarget.SELF);
+                CardRarity.BASIC, CardTarget.SELF);
         this.baseBlock = 5;
 
     }

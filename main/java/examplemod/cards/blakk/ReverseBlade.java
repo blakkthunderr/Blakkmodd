@@ -18,7 +18,7 @@ public class ReverseBlade
     public static final String ID = "ReverseBlade";
     public static final String NAME = "Reverse Blade";
     public static final String DESCRIPTION = "Deal !D! damage for every stack of Weak you have.";
-    public static final String IMG_PATH = "img/BlakkDefend.png";
+    public static final String IMG_PATH = "img/ReverseBlade.png";
     private static final int COST = 1;
     //private static final int BLOCK_AMT = 6;
 

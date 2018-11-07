@@ -19,7 +19,7 @@ public class OmegaBlade
     public static final String ID = "OmegaBlade";
     public static final String NAME = "Omega Blade";
     public static final String DESCRIPTION = "Deal !D! damage. Lose all Souls.";
-    public static final String IMG_PATH = "img/SoulStrike.png";
+    public static final String IMG_PATH = "img/OmegaBlade.png";
     private static final int COST = 4;
     private static final int ATTACK_DMG = 60;
 

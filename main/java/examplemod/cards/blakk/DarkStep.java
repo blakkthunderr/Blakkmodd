@@ -15,8 +15,8 @@ public class DarkStep
         extends CustomCard {
     public static final String ID = "DarkStep";
     public static final String NAME = "Dark Step";
-    public static final String DESCRIPTION = "Gain !M! [E]. Draw 1 card.";
-    public static final String IMG_PATH = "img/BlakkStrike.png";
+    public static final String DESCRIPTION = "Gain !M! [E]. Draw 1 card. Exhaust.";
+    public static final String IMG_PATH = "img/DarkStep.png";
     private static final int COST = 0;
 
 
@@ -28,7 +28,7 @@ public class DarkStep
 
             this.baseMagicNumber = 1;
             this.magicNumber = this.baseMagicNumber;
-
+        this.exhaust = true;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class DarkStep
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.baseMagicNumber = 2;
+            this.upgradeMagicNumber(1);
 
 
         }

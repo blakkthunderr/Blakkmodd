@@ -1,6 +1,7 @@
 package examplemod.cards.blakk;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import examplemod.patches.AbstractCardEnum;
 
@@ -16,8 +18,8 @@ public class ReverseWounds
         extends CustomCard {
     public static final String ID = "ReverseWounds";
     public static final String NAME = "Reverse Wounds";
-    public static final String DESCRIPTION = "Heal 2 HP for every stack of Vulnerable you have. Exhaust.";
-    public static final String IMG_PATH = "img/BlakkDefend.png";
+    public static final String DESCRIPTION = "Gain regen for every stack of Vulnerable you have +1. Exhaust.";
+    public static final String IMG_PATH = "img/ReverseWounds.png";
     private static final int COST = 1;
     private static final int BLOCK_AMT = 6;
 
@@ -28,7 +30,7 @@ public class ReverseWounds
                 CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = 0;
         this.magicNumber = this.baseMagicNumber;
-        this.baseHeal = 2;
+        this.baseHeal = 1;
         this.heal = this.baseHeal;
         this.exhaust = true;
 
@@ -44,9 +46,8 @@ public class ReverseWounds
             } else {
                 this.magicNumber = 0;
             }
-            for (i = 0; i < this.magicNumber; ++i) {
-                AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.baseHeal));
-            }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber+this.baseHeal), this.magicNumber+this.baseHeal));
+
 
 
     }
@@ -61,8 +62,8 @@ public class ReverseWounds
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.baseHeal = 3;
-            this.rawDescription = "Heal 3 HP for every stack of Vulnerable you have. Exhaust.";
+            this.baseHeal = 2;
+            this.rawDescription = "Gain regen for every stack of Vulnerable you have +2. Exhaust.";
             this.initializeDescription();
 
         }

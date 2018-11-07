@@ -20,7 +20,7 @@ public class WallOfSouls
     public static final String ID = "WallOfSouls";
     public static final String NAME = "Wall of Souls";
     public static final String DESCRIPTION = "Gain !B! block X times. Lose X Souls.";
-    public static final String IMG_PATH = "img/BlakkDefend.png";
+    public static final String IMG_PATH = "img/WallOfSouls.png";
     private static final int COST = -1;
     private static final int BLOCK_AMT = 5;
 
