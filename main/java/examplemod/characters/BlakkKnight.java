@@ -29,20 +29,20 @@ public class BlakkKnight extends CustomPlayer {
 
     private static final int ENERGY_PER_TURN = 3;
 
-    private static final String BLACKBEARD_SKELETON_ATLAS_PATH = "img/char/skeleton.atlas";
-    private static final String BLACKBEARD_SKELETON_JSON_PATH = "img/char/skeleton.json";
-    private static final String BLACKBEARD_SHOULDER_1 = "img/char/shoulder.png";
-    private static final String BLACKBEARD_SHOULDER_2 = "img/char/shoulder2.png";
-    private static final String BLACKBEARD_CORPSE = "img/char/corpse.png";
+    private static final String BLAKK_SKELETON_ATLAS_PATH = "img/char/skeleton.atlas";
+    private static final String BLAKK_SKELETON_JSON_PATH = "img/char/skeleton.json";
+    private static final String BLAKK_SHOULDER_1 = "img/char/shoulder.png";
+    private static final String BLAKK_SHOULDER_2 = "img/char/shoulder2.png";
+    private static final String BLAKK_CORPSE = "img/char/corpse.png";
 
 
     public BlakkKnight(String name, PlayerClass setClass) {
         super(name, setClass, null, null, (String) null, null);
 
-        initializeClass(null, BLACKBEARD_SHOULDER_2, BLACKBEARD_SHOULDER_1, BLACKBEARD_CORPSE,
+        initializeClass(null, BLAKK_SHOULDER_2, BLAKK_SHOULDER_1, BLAKK_CORPSE,
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 
-        this.loadAnimation(BLACKBEARD_SKELETON_ATLAS_PATH, BLACKBEARD_SKELETON_JSON_PATH, 1.0f);
+        this.loadAnimation(BLAKK_SKELETON_ATLAS_PATH, BLAKK_SKELETON_JSON_PATH, 1.0f);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());
     }
@@ -149,7 +149,7 @@ public class BlakkKnight extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~dark dweller,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";
+        return "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~dark~ ~dweller,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";
     }
 
     @Override

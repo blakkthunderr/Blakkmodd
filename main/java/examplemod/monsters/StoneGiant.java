@@ -28,9 +28,9 @@ public class StoneGiant extends AbstractMonster
     public static final String[] DIALOG;
     private static final int HP = 1000;
     private static final int A_HP = 1100;
-    private static final int BASH_DMG = 30;
+    private static final int BASH_DMG = 50;
     private static final int RUSH_DMG = 100;
-    private static final int A_BASH_DMG = 40;
+    private static final int A_BASH_DMG = 60;
     private static final int A_RUSH_DMG = 120;
     private static final int DEBUFF_AMT = 2;
     private static final int METAL_AMT = 7;
@@ -75,13 +75,13 @@ public class StoneGiant extends AbstractMonster
         if (AbstractDungeon.ascensionLevel >= 19) {
             this.metalAmt = A_METAL_AMT;
             this.thornsAmt = A_THORNS_AMT;
-            this.applyFrail = 100;
+            this.applyFrail = 75;
 
         }
         else {
             this.metalAmt = METAL_AMT;
             this.thornsAmt = THORNS_AMT;
-            this.applyFrail = 75;
+            this.applyFrail = 50;
 
         }
         this.damage.add(new DamageInfo(this, this.bashDmg));
@@ -115,7 +115,7 @@ public class StoneGiant extends AbstractMonster
             case GIANTRAGE: {
 
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(AbstractDungeon.player, applyFrail), applyFrail));
-                applyFrail += 50;
+                applyFrail += 75;
                 this.setMove(StoneGiant.MOVES[4], (byte)5, Intent.ATTACK, this.rushDmg, 1, false);
                 break;
             }

@@ -30,6 +30,11 @@ public class BlakkDefend
     }
 
     @Override
+    public boolean isDefend() {
+        return true;
+    }
+
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (Settings.isDebug) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, 50));

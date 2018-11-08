@@ -29,6 +29,11 @@ public class BlakkStrike
     }
 
     @Override
+    public boolean isStrike() {
+        return true;
+    }
+
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn),

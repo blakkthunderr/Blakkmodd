@@ -25,9 +25,9 @@ public class TwilightGuardian extends AbstractMonster
     private static final int HP = 400;
     private static final int A_HP = 450;
     private static final int BASH_DMG = 20;
-    private static final int RUSH_DMG = 10;
+    private static final int RUSH_DMG = 8;
     private static final int A_BASH_DMG = 25;
-    private static final int A_RUSH_DMG = 12;
+    private static final int A_RUSH_DMG = 10;
     private static final int DEBUFF_AMT = 2;
     private static final int METAL_AMT = 10;
     private static final int A_METAL_AMT = 15;
