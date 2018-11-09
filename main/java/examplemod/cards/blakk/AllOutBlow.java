@@ -21,7 +21,7 @@ public class AllOutBlow
     public static final String DESCRIPTION = "Deal !D! damage. Gain 3 Weak.";
     public static final String IMG_PATH = "img/AllOutBlow.png";
     private static final int COST = 3;
-    private static final int ATTACK_DMG = 25;
+    private static final int ATTACK_DMG = 30;
 
 
     public AllOutBlow() {

@@ -18,7 +18,7 @@ public class DarkForce
         extends CustomCard {
     public static final String ID = "DarkForce";
     public static final String NAME = "Dark Force";
-    public static final String DESCRIPTION = "If you are Weak, gain !M! Strength. Exhaust.";
+    public static final String DESCRIPTION = "Gain strength equal to your Weak.";
     public static final String IMG_PATH = "img/DarkForce.png";
     private static final int COST = 1;
     //private static final int BLOCK_AMT = 6;
@@ -27,7 +27,7 @@ public class DarkForce
     public DarkForce() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.BLAKK_COLOR,
-                CardRarity.COMMON, CardTarget.SELF);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 2;
 
         this.magicNumber=this.baseMagicNumber;
@@ -42,9 +42,15 @@ public class DarkForce
 
 
         if (p.hasPower(WeakPower.POWER_ID)) {
+            this.magicNumber = (p.getPower(WeakPower.POWER_ID).amount);
+        } else {
+            this.magicNumber = 0;
+        }
+        if (this.upgraded){
+            this.magicNumber += 1;}
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
 
-        }
+
 
     }
 
@@ -58,7 +64,8 @@ public class DarkForce
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.rawDescription = "Gain strength equal to your Weak+1.";
+            this.initializeDescription();
 
         }
     }

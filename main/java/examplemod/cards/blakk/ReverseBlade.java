@@ -17,7 +17,7 @@ public class ReverseBlade
         extends CustomCard {
     public static final String ID = "ReverseBlade";
     public static final String NAME = "Reverse Blade";
-    public static final String DESCRIPTION = "Deal !D! damage for every stack of Weak you have.";
+    public static final String DESCRIPTION = "Deal !D! damage for every stack of Weak you have+1.";
     public static final String IMG_PATH = "img/ReverseBlade.png";
     private static final int COST = 1;
     //private static final int BLOCK_AMT = 6;
@@ -27,7 +27,7 @@ public class ReverseBlade
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.BLAKK_COLOR,
                 CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 6;
+        this.baseDamage = 8;
         this.magicNumber = 0;
         this.damage=this.baseDamage;
 
@@ -42,9 +42,9 @@ public class ReverseBlade
             int i;
 
             if (p.hasPower(WeakPower.POWER_ID)) {
-                this.magicNumber = (p.getPower(WeakPower.POWER_ID).amount);
+                this.magicNumber = (p.getPower(WeakPower.POWER_ID).amount)+1;
             } else {
-                this.magicNumber = 0;
+                this.magicNumber = 1;
             }
             for (i = 0; i < this.magicNumber; ++i) {
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
@@ -65,9 +65,8 @@ public class ReverseBlade
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.baseDamage = 9;
-            this.rawDescription = "Deal !D! damage for every stack of Weak you have.";
-            this.initializeDescription();
+            this.upgradeDamage(2);
+
 
         }
     }

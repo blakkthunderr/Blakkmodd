@@ -34,6 +34,7 @@ public class BlakkBlade
         this.damage = this.baseDamage;
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
+        this.isMultiDamage = true;
     }
 
     @Override

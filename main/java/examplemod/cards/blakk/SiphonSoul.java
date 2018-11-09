@@ -17,7 +17,7 @@ public class SiphonSoul
         extends CustomCard {
     public static final String ID = "SiphonSoul";
     public static final String NAME = "Siphon Soul";
-    public static final String DESCRIPTION = "Gain 1 Soul. The enemy loses !M! Strength. Exhaust.";
+    public static final String DESCRIPTION = "Gain 2 Souls. The enemy loses !M! Strength. Exhaust.";
     public static final String IMG_PATH = "img/SiphonSoul.png";
     private static final int COST = 2;
     private static final int BLOCK_AMT = 6;
@@ -38,17 +38,14 @@ public class SiphonSoul
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.hasPower (SoulPower.POWER_ID)) {
-            int count = 0;
-            count = (p.getPower(SoulPower.POWER_ID).amount);
-            if (count >= 1) {
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SoulPower(p, 1), 1));
+
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SoulPower(p, 2), 2));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
 
-            }
 
-        }
+
+
     }
 
 

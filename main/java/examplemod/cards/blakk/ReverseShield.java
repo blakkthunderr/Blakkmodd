@@ -15,7 +15,7 @@ public class ReverseShield
         extends CustomCard {
     public static final String ID = "ReverseShield";
     public static final String NAME = "Reverse Shield";
-    public static final String DESCRIPTION = "Gain !B! block for every stack of Frail you have.";
+    public static final String DESCRIPTION = "Gain !B! block for every stack of Frail you have+1.";
     public static final String IMG_PATH = "img/ReverseShield.png";
     private static final int COST = 1;
     private static final int BLOCK_AMT = 6;
@@ -33,20 +33,18 @@ public class ReverseShield
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (Settings.isDebug) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, 50));
-        } else {
+
             int i;
 
             if (p.hasPower(FrailPower.POWER_ID)) {
-                this.magicNumber = (p.getPower(FrailPower.POWER_ID).amount);
+                this.magicNumber = (p.getPower(FrailPower.POWER_ID).amount)+1;
             } else {
-                this.magicNumber = 0;
+                this.magicNumber = 1;
             }
 
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block*this.magicNumber));
 
-        }
+
 
     }
 
