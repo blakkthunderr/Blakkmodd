@@ -18,14 +18,14 @@ public class ShadowDodge
     public static final String DESCRIPTION = "Gain !B! block. Add a Void into your discard pile.";
     public static final String IMG_PATH = "img/ShadowDodge.png";
     private static final int COST = 1;
-    private static final int BLOCK_AMT = 10;
+    private static final int BLOCK_AMT = 12;
 
 
     public ShadowDodge() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.BLAKK_COLOR,
                 CardRarity.COMMON, CardTarget.SELF);
-        this.baseBlock = 10;
+        this.baseBlock = 12;
 
     }
 
@@ -48,7 +48,7 @@ public class ShadowDodge
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.baseBlock = 13;
+            this.upgradeBlock(4);
 
 
         }

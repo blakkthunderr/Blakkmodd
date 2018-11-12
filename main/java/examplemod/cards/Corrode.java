@@ -17,7 +17,7 @@ public class Corrode
         extends CustomCard {
     public static final String ID = "Corrode";
     public static final String NAME = "Corrode";
-    public static final String DESCRIPTION = "Remove all Artifacts from the target. Apply 3 Poison.";
+    public static final String DESCRIPTION = "Remove all Artifacts from the target. Apply !M! Poison.";
     public static final String IMG_PATH = "img/Corrode.png";
     private static final int COST = 1;
 
@@ -67,9 +67,9 @@ public class Corrode
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = "Remove all Artifacts from the target. Apply 6 Poison.";
-            this.baseMagicNumber = 6;
-            this.initializeDescription();
+
+            this.upgradeMagicNumber(3);
+
 
         }
     }

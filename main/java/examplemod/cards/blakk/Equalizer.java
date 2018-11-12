@@ -6,25 +6,26 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import examplemod.actions.EqualizerAction;
+import examplemod.actions.MakeCardInHandExhaustAction;
 import examplemod.patches.AbstractCardEnum;
 import examplemod.powers.GlassSkinPower;
-import examplemod.powers.WitchProtectionPower;
 
-public class WitchProtection
+public class Equalizer
         extends CustomCard {
-    public static final String ID = "WitchProtection";
-    public static final String NAME = "Witch's Protection";
-    public static final String DESCRIPTION = "At the start of your turn, Gain Block equal to the amount of Weak, Vulnerable, and Frail you have.";
-    public static final String IMG_PATH = "img/WitchProtection.png";
-    private static final int COST = 1;
+    public static final String ID = "Equalizer";
+    public static final String NAME = "Equalizer";
+    public static final String DESCRIPTION = "Make all of the cards in your draw and discard piles cost 1 [E] for the rest of this combat.";
+    public static final String IMG_PATH = "img/Equalizer.png";
+    private static final int COST = 3;
 
 
 
-    public WitchProtection() {
+    public Equalizer() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.BLAKK_COLOR,
-                CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 4;
+                CardRarity.RARE, CardTarget.SELF);
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
 
     }
@@ -32,7 +33,7 @@ public class WitchProtection
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WitchProtectionPower(p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new EqualizerAction());
 
 
 
@@ -40,7 +41,7 @@ public class WitchProtection
 
     @Override
     public AbstractCard makeCopy() {
-        return new WitchProtection();
+        return new Equalizer();
     }
 
     @Override
@@ -48,7 +49,8 @@ public class WitchProtection
         if (!this.upgraded) {
             this.upgradeName();
             this.isInnate = true;
-            this.rawDescription = "Innate. At the start of your turn, Gain Block equal to the amount of Weak, Vulnerable, and Frail you have.";
+            this.rawDescription = "Innate. Make all of the cards in your draw and discard piles cost 1 [E] for the rest of this combat.";
+            this.initializeDescription();
 
         }
     }

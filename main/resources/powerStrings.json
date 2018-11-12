@@ -66,5 +66,11 @@
     "DESCRIPTIONS": [
       "Lose Souls at the end of your turn."
     ]
+  },
+  "Disaster": {
+    "NAME": "Disaster",
+    "DESCRIPTIONS": [
+      "Whenever you draw a Status card, gain [E] and draw cards."
+    ]
   }
   }

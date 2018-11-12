@@ -5,7 +5,10 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -30,6 +33,8 @@ import examplemod.events.MonkeyBusiness;
 import examplemod.monsters.*;
 import examplemod.patches.AbstractCardEnum;
 import examplemod.patches.MyPlayerClassEnum;
+import examplemod.powers.DisasterPower;
+import examplemod.powers.SoulPower;
 import examplemod.relics.*;
 
 import java.nio.charset.StandardCharsets;
@@ -38,7 +43,8 @@ import static examplemod.patches.AbstractCardEnum.BLAKK_COLOR;
 
 @SpireInitializer
 public class ExampleMod implements PostExhaustSubscriber,
-        PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCardsSubscriber, EditRelicsSubscriber, PostInitializeSubscriber, EditStringsSubscriber, EditCharactersSubscriber {
+        PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCardsSubscriber, EditRelicsSubscriber, PostInitializeSubscriber,
+         PostDrawSubscriber, EditStringsSubscriber, EditCharactersSubscriber {
 
 
     private static final Color BLACK = CardHelper.getColor(0.0f, 0.0f, 0.0f);
@@ -79,6 +85,18 @@ public class ExampleMod implements PostExhaustSubscriber,
 
     }
 
+    @Override
+    public void receivePostDraw(AbstractCard c){
+        if (AbstractDungeon.player.hasPower (DisasterPower.POWER_ID)) {
+            if (c.type == AbstractCard.CardType.STATUS){
+                int count = (AbstractDungeon.player.getPower(DisasterPower.POWER_ID).amount);
+                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(count));
+                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, count));
+
+
+            }
+        }
+    }
 
     @Override
     public void receiveEditCharacters() {
@@ -222,6 +240,8 @@ public class ExampleMod implements PostExhaustSubscriber,
         BaseMod.addCard(new SmokeBomb()); //skill
         BaseMod.addCard(new Corrode()); //skill
         BaseMod.addCard(new DeadlyAura()); //skill
+        BaseMod.addCard(new WeightedArmbands()); //Skill
+        BaseMod.addCard(new WeightedLegbands()); //Skill
 
         BaseMod.addCard(new FiftyTwoCardPickup()); //skill
 
@@ -286,6 +306,8 @@ public class ExampleMod implements PostExhaustSubscriber,
         BaseMod.addCard(new IronMaiden()); //Power
         BaseMod.addCard(new TitanSword()); //Attack
         BaseMod.addCard(new MonsterForm()); //Power
+        BaseMod.addCard(new Equalizer()); //Power
+        BaseMod.addCard(new Disaster()); //Power
 
 
     }

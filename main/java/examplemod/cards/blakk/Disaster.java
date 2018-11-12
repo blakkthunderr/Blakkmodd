@@ -7,24 +7,24 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import examplemod.patches.AbstractCardEnum;
-import examplemod.powers.GlassSkinPower;
+import examplemod.powers.DisasterPower;
 import examplemod.powers.WitchProtectionPower;
 
-public class WitchProtection
+public class Disaster
         extends CustomCard {
-    public static final String ID = "WitchProtection";
-    public static final String NAME = "Witch's Protection";
-    public static final String DESCRIPTION = "At the start of your turn, Gain Block equal to the amount of Weak, Vulnerable, and Frail you have.";
-    public static final String IMG_PATH = "img/WitchProtection.png";
-    private static final int COST = 1;
+    public static final String ID = "Disaster";
+    public static final String NAME = "Disaster";
+    public static final String DESCRIPTION = "Whenever you draw a Status card, gain [E] and draw a card.";
+    public static final String IMG_PATH = "img/Disaster.png";
+    private static final int COST = 3;
 
 
 
-    public WitchProtection() {
+    public Disaster() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.BLAKK_COLOR,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
 
     }
@@ -32,7 +32,7 @@ public class WitchProtection
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WitchProtectionPower(p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DisasterPower(p, 1), 1));
 
 
 
@@ -40,15 +40,14 @@ public class WitchProtection
 
     @Override
     public AbstractCard makeCopy() {
-        return new WitchProtection();
+        return new Disaster();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.isInnate = true;
-            this.rawDescription = "Innate. At the start of your turn, Gain Block equal to the amount of Weak, Vulnerable, and Frail you have.";
+            this.upgradeBaseCost(2);
 
         }
     }
